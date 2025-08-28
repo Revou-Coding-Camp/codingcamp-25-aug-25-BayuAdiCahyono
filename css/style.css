@@ -1,0 +1,172 @@
+/* === GLOBAL STYLES & RESET === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* === HEADER & NAVBAR === */
+header {
+    background-color: white;
+    padding: 10px 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* === WELCOME BANNER SECTION === */
+#welcome-banner .banner-image img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* === HEADQUARTERS SECTION === */
+#headquarters {
+    text-align: center;
+}
+
+.city-container {
+    display: flex;
+    flex-direction: column; /* Mobile: Stack vertically */
+    align-items: center;
+    gap: 30px;
+}
+
+.city .circle {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* === MESSAGE US SECTION === */
+.contact-container {
+    display: flex;
+    flex-direction: column; /* Mobile: Stack vertically */
+    gap: 20px;
+}
+
+.form-section, .result-section {
+    flex: 1; /* Both take equal space */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.result-section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.result-section p {
+    margin-bottom: 10px;
+}
+
+/* Style khusus untuk form group yang inline/sebaris */
+.form-group-inline {
+    display: flex;         /* 1. Buat jadi flex container (otomatis sebaris) */
+    align-items: center;   /* 2. Sejajarkan item secara vertikal di tengah */
+    gap: 15px;             /* 3. Beri jarak antar item (antara label utama dan pilihan) */
+}
+
+/* Kita juga perlu sedikit penyesuaian untuk label di dalamnya */
+.form-group-inline > label {
+    margin-bottom: 0; /* Hapus margin bawah dari label utama ("Jenis Kelamin:") */
+}
+
+.form-group-inline div {
+    display: flex;         /* Buat pilihan radio (Laki-laki, Perempuan) juga sebaris */
+    align-items: center;
+    gap: 10px;             /* Beri jarak antar pilihan */
+}
+/* === FOOTER === */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* === RESPONSIVE DESIGN (MEDIA QUERIES) === */
+/* For Tablets and Desktops */
+@media (min-width: 768px) {
+    .city-container {
+        flex-direction: row; /* Desktop: Side-by-side */
+        justify-content: space-around;
+    }
+
+    .contact-container {
+        flex-direction: row; /* Desktop: Side-by-side */
+    }
+}
